@@ -24,6 +24,7 @@ import site.metacoding.blogv3.web.dto.user.PasswordResetReqDto;
 @RequiredArgsConstructor
 @Service // IoC 등록
 public class UserService {
+
     // DI
     private final VisitRepository visitRepository;
     private final UserRepository userRepository;
@@ -77,6 +78,7 @@ public class UserService {
         String rawPassword = user.getPassword(); // 1234
         String encPassword = bCryptPasswordEncoder.encode(rawPassword); // 해쉬 알고리즘
         user.setPassword(encPassword);
+
         User userEntity = userRepository.save(user);
 
         // 2. save 두번
@@ -85,12 +87,15 @@ public class UserService {
         visit.setUser(userEntity); // 터트리고 테스트 해보기
         visitRepository.save(visit);
     }
+
     public boolean 유저네임중복체크(String username) {
         Optional<User> userOp = userRepository.findByUsername(username);
+
         if (userOp.isPresent()) {
             return false;
         } else {
             return true;
         }
     }
+
 }

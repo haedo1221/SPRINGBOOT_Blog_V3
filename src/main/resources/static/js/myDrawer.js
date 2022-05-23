@@ -14,4 +14,4 @@ $('.drawer').drawer({
         preventDefault: false
     },
     showOverlay: true
-}); 
+});

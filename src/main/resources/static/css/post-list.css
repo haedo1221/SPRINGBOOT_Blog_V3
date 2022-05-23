@@ -20,10 +20,11 @@
 }
 
 .my_post_list_item_right {
-    flex: 1;
+    flex:1;
     padding: 15px;
 }
 
 .my_post_list_item_right div {
     margin-bottom: 5px;
-} 
+}
+

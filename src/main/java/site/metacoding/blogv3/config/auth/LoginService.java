@@ -19,13 +19,10 @@ public class LoginService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        
         Optional<User> userOp = userRepository.findByUsername(username);
-        
         if (userOp.isPresent()) {
             return new LoginUser(userOp.get());
         }
-        
         return null;
     }
 

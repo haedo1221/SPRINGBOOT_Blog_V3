@@ -15,7 +15,7 @@
     background-color: rgb(255, 85, 68);
     color: white;
     text-decoration-line: none;
-} 
+}
 
 .my_main_list {
     display: grid;
@@ -41,4 +41,4 @@
 .my_main_item_thumnail {
     height: 200px;
     border-bottom: 1px solid rgb(25, 25, 25);
-} 
+}

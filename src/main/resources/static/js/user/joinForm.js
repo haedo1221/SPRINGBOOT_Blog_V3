@@ -66,4 +66,4 @@ function passwordSameCheck() {
         valid.password.state = false;
         valid.password.msg = "패스워드가 동일하지 않습니다.";
     }
-} 
+}
