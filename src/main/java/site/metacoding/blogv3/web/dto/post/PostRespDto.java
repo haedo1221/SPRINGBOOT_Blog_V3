@@ -12,6 +12,6 @@ import site.metacoding.blogv3.domain.post.Post;
 @NoArgsConstructor
 @Data
 public class PostRespDto {
-    private List<Post> posts;
+    private Page<Post> posts;
     private List<Category> categorys;
 }
